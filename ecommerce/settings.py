@@ -143,12 +143,11 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login/'
 
-
-
+# Cloudinary Config
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'da5byhyhe',
-    'API_KEY': '916914441692587',
-    'API_SECRET': 'FvrpUiBGaWEOQXnJ48gaaZU03rM',  # use the full secret here
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
